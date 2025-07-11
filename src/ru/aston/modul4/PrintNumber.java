@@ -3,7 +3,7 @@ package ru.aston.modul4;
 public class PrintNumber implements Runnable {
 
     private static final Object lock = new Object();
-    private static boolean turn = true;
+    private static volatile boolean turn = true;
     private final int numberToPrint;
 
     public PrintNumber(int numberToPrint) {
